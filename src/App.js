@@ -22,6 +22,12 @@ class App extends Component {
       ]
     };
   }
+  
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(data => console.log(data));
+  }
 
   render() {
     return (
